@@ -1,0 +1,17 @@
+extends ../../assets/blocks/layout/layout
+block styles
+  link(rel="stylesheet", href="assets/styles/styles.css")
+block header
+  include ../../assets/blocks/header/header
+block content
+  include ../../assets/blocks/popup/popup
+  include ../../assets/blocks/mixins/mixins-descr
+  include ../../assets/blocks/description/description
+  include ../../assets/blocks/photos/photos
+  include ../../assets/blocks/description/description-2
+
+block footer
+//-   include ../../assets/blocks/footer/footer
+block script
+  //- script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+  script(src="assets/scripts/index.bundle.js")

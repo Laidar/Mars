@@ -1,0 +1,101 @@
+.photos
+	padding: 0 0 60px
+	&-container
+		overflow: hidden
+	&__items
+		width: calc(100% + 60px)
+		display: flex
+		justify-content: space-between
+		// padding: 0 165px
+		box-sizing: border-box
+		overflow: hidden
+		position: relative
+		display: inline-block
+		margin-left: -15px
+	&__item
+		// max-width: 350px
+		height: 350px
+		width: 100%
+		cursor: pointer
+		display: inline-flex
+		margin-right: 30px
+		position: relative
+
+		&:hover
+			background-color: rgba(0,0,0, 0.5)
+			opacity: 0.6
+
+			&:after
+				content: "+"
+				position: absolute
+				width: 20px
+				height: 20px
+				color: #ffffff
+				// background-image: url("../images/popup/x.svg")
+				// background-repeat: no-repeat
+				// background-position: center
+				// background-size: contain 
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+.slick
+	&-arrow
+		position: absolute
+		top: 50%
+		z-index: 1
+		text-indent: -999999px
+		width: 40px
+		height: 100%
+		margin-top: -5px
+		background-color: rgba(#ffffff, 0.3)
+		// border-radius: 50%
+		border: none
+		transform: translateY(-50%)
+		outline: none
+		cursor: pointer
+		&:after
+			content: ""
+			width: 30px
+			height: 30px
+			background-image: url(../images/photos/arrow.svg)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			position: absolute
+			display: block
+			top: 50%
+	&-prev
+		left: 0
+		&:after
+			transform: rotate(180deg)
+	&-next
+		right: 30px
+
+@media (max-width: 768px)
+	.photos
+		&__items
+			width: 135%
+			margin-left: 0
+		&__item
+			height: 300px
+			max-width: 300px
+			margin-right: 15px
+
+@media (max-width: 376px)
+	.photos
+		&__items
+			width: 130%
+			margin-left: 0
+		
+		&__item
+			height: 220px
+			max-width: 220px
+			width: 100%
+			margin-right: 10px

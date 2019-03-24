@@ -1,0 +1,116 @@
+.popup
+	position: fixed
+	background-color: rgba(0,0,0, 0.7)
+	display: none
+	width: 100%
+	height: 100%
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	z-index: 999999
+
+	&__wrap
+		width: 100%
+		padding: 20px 0
+		box-sizing: border-box
+
+	&__close
+		width: 24px
+		height: 24px
+		background-image: url("../images/popup/x.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		position: absolute
+		// right: 0
+		right: 0
+		top: 30px
+		cursor: pointer
+		&_hidden
+			display: none
+
+
+	&-container
+		// max-width: 1110px
+		// max-width: 100%
+		// width: 100%
+		height: 100%
+		display: flex
+		align-items: center
+		padding: 20px 0
+		position: relative
+		overflow: auto
+
+		&_big
+			max-width: 100%
+
+	&_active
+		display: flex
+
+	&__img
+		width: 100%
+		margin: 0 auto
+		max-height: 640px
+		overflow: hidden
+		align-items: center
+		justify-content: center
+		display: flex
+
+		// height: 700px
+
+		img
+			width: 100%
+			height: 100%
+			cursor: zoom-in
+			// transform: scale(0.5)
+
+		&_big
+			width: max-content
+			max-height: none
+    		overflow: auto
+
+			img
+				cursor: zoom-out
+
+	&__navigate
+		position: absolute
+		right: 0
+		bottom: 30px
+		display: flex
+		left: 50%
+		transform: translateX(-50%)
+		justify-content: center
+		&_hidden
+			display: none
+		&-item
+			width: 24px
+			height: 24px
+			background-image: url("../images/popup/arrow.svg")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			// margin-right: 20px
+			cursor: pointer
+
+			&_prev
+				margin-right: 20px
+				// background-image: url("../images/popup/arrow.svg")
+			
+			&_next
+				// width: 24px
+				// height: 24px
+				// background-image: url("../images/popup/arrow.svg")
+				// background-repeat: no-repeat
+				// background-position: center
+				// background-size: contain
+				transform: rotate(180deg)
+				// cursor: pointer
+
+			&_disabled
+				opacity: 0.5
+
+@media (max-width: 768px)
+	.popup
+		&__close
+			right: 30px

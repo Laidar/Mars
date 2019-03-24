@@ -1,0 +1,6 @@
+mixin descr(title_size_class,title, text)
+	.description
+		.description-container.container
+			.description__box
+				//- div(class="description__title " + title-size-class)
+				.description__title(class=title_size_class) !{title} <span class="description__text">#{text}</span>

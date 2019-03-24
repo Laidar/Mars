@@ -1,0 +1,57 @@
+.description
+	// margin-top: 130px
+	margin-bottom: 60px
+	&-container
+		display: flex
+		justify-content: center
+		color: #ffffff
+
+	&__box
+		max-width: 540px
+		width: 100%
+	&__title
+		font-family: montserrat
+		font-weight: 700
+		font-size: 50px
+		letter-spacing: 3.87px
+		// width: 350px
+		// width: 178px
+		// // float: left
+		// display: inline-block
+
+		&_min
+			font-size: 25px
+			letter-spacing: 1.9px
+	&__text
+		font-family: montserrat
+		font-weight: 400
+		font-size: 16px
+		line-height: 26px
+		letter-spacing: 1.24px
+		opacity: 0.6
+		// width: 350px
+		display: inline-flex
+		max-width: 350px
+    	width: 100%
+
+		float: right
+		margin-top: 34px
+
+@media (max-width: 768px)
+	.description
+		&-container
+			justify-content: flex-start
+
+@media (max-width: 376px)
+	.description
+		&__box
+		&__title
+			font-size: 40px
+			&_min
+				font-size: 21px
+		&__text
+			// width: 295px
+			float: right
+			margin-top: 34px
+			max-width: 295px
+			width: 100%
